@@ -1,0 +1,36 @@
+.tool-card {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 15px;
+  width: 280px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tool-card:hover {
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+.tool-card h3 {
+  margin-top: 0;
+  color: #337ab7; /* Bootstrap primary blue, for example */
+}
+.tool-card button {
+  background-color: #5cb85c; /* Bootstrap success green */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+.tool-card button:hover {
+  background-color: #4cae4c;
+}

@@ -1,0 +1,45 @@
+.output-display {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa; /* Light grey background */
+  min-height: 100px;
+  font-family: monospace;
+}
+.output-display.loading, .output-display.placeholder {
+  color: #777;
+  font-style: italic;
+}
+.output-display pre {
+  white-space: pre-wrap; /* Allow wrapping */
+  word-wrap: break-word; /* Break long words */
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #eee;
+  max-height: 400px; /* Limit height and make scrollable */
+  overflow-y: auto;
+}
+.output-display .error-message {
+  color: red;
+  border: 1px solid red;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.output-display .error-message pre {
+  color: red; /* Ensure preformatted errors are also red */
+}
+.output-display h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.output-display ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.output-display li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #eee;
+}
+.output-display li:last-child {
+  border-bottom: none;
+}

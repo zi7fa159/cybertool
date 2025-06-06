@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Nmap",
+    "id": "nmap",
+    "description": "Network scanner for discovering hosts and services.",
+    "dockerImage": "alpine/nmap",
+    "parameters": [
+      {
+        "name": "Target",
+        "type": "text",
+        "flag": "",
+        "required": true,
+        "placeholder": "e.g., scanme.nmap.org or 192.168.1.1"
+      },
+      {
+        "name": "Scan Type",
+        "type": "select",
+        "flagPrefix": "-",
+        "options": [
+          {"label": "TCP SYN Scan (Default)", "value": "sS"},
+          {"label": "TCP Connect Scan", "value": "sT"},
+          {"label": "UDP Scan", "value": "sU"},
+          {"label": "Ping Scan", "value": "sn"}
+        ],
+        "default": "sS"
+      },
+      {
+        "name": "Timing Template",
+        "type": "select",
+        "flagPrefix": "-T",
+        "options": [
+          {"label": "Paranoid (0)", "value": "0"},
+          {"label": "Sneaky (1)", "value": "1"},
+          {"label": "Polite (2)", "value": "2"},
+          {"label": "Normal (3)", "value": "3"},
+          {"label": "Aggressive (4)", "value": "4"},
+          {"label": "Insane (5)", "value": "5"}
+        ],
+        "default": "3"
+      },
+      {
+        "name": "Other Options",
+        "type": "text",
+        "flag": "",
+        "required": false,
+        "placeholder": "e.g., -A -v"
+      }
+    ]
+  },
+  {
+    "name": "Metasploit",
+    "id": "metasploit",
+    "description": "Advanced open-source penetration testing platform.",
+    "dockerImage": "metasploitframework/metasploit-framework",
+    "parameters": [
+      {
+        "name": "Target Host (RHOSTS)",
+        "type": "text",
+        "required": true,
+        "placeholder": "e.g., 192.168.1.10"
+      },
+      {
+        "name": "Target Port (RPORT)",
+        "type": "number",
+        "required": false,
+        "placeholder": "e.g., 80"
+      },
+      {
+        "name": "Payload",
+        "type": "text",
+        "required": false,
+        "placeholder": "e.g., windows/meterpreter/reverse_tcp"
+      },
+      {
+        "name": "Local Host (LHOST)",
+        "type": "text",
+        "required": false,
+        "placeholder": "Your IP address for reverse shells"
+      },
+      {
+        "name": "Local Port (LPORT)",
+        "type": "number",
+        "required": false,
+        "placeholder": "e.g., 4444"
+      },
+      {
+        "name": "Module",
+        "type": "text",
+        "required": true,
+        "placeholder": "e.g., exploit/multi/handler"
+      },
+      {
+        "name": "Custom msfconsole commands",
+        "type": "textarea",
+        "required": false,
+        "placeholder": "Enter msfconsole commands, one per line. Use 'exit -y' to ensure the container stops."
+      }
+    ]
+  }
+]

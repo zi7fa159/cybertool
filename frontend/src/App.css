@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+}
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tool-card-placeholder { /* This class is no longer used by ToolList but kept for now */
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+/* Add other styles as needed */
+
+.main-content {
+  display: flex;
+  flex-direction: row; /* Default for wider screens */
+  padding: 10px;
+  gap: 20px; /* Space between sections */
+}
+
+.tools-section {
+  flex: 1; /* Takes up 1 part of the space */
+  /* max-width: 400px; Optional: if you want to limit width of tool list */
+}
+
+.execution-section {
+  flex: 2; /* Takes up 2 parts of the space, making it wider */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .tools-section, .execution-section {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
